@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../CEDESOFT/COLDEPORTES/coldeportes/.idea/coldeportes.iml" filepath="$PROJECT_DIR$/../../CEDESOFT/COLDEPORTES/coldeportes/.idea/coldeportes.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dosports.iml" filepath="$PROJECT_DIR$/.idea/dosports.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../CEDESOFT/GEDI/gedi/.idea/gedi.iml" filepath="$PROJECT_DIR$/../../CEDESOFT/GEDI/gedi/.idea/gedi.iml" />
     </modules>
   </component>
 </project>
