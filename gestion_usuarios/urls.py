@@ -19,5 +19,6 @@ from django.contrib import admin
 
 urlpatterns = patterns('gestion_usuarios.views',
     url(r'^hello$','hello_world',name='hello_world' ),
+    url(r'^crear','crear_usuario',name='crear_usuario' ),
 )
 

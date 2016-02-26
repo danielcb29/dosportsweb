@@ -19,6 +19,7 @@ from django.contrib import admin
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^rest/', include('gestion_usuarios.urls')),
+    url(r'^usuarios/', include('gestion_usuarios.urls'),name='index'),
+    url(r'^', 'gestion_usuarios.views.inicio'),
 )
 
