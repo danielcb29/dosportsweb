@@ -16,6 +16,6 @@ class Usuario(User):
         (5,'EXCELENTE'),
 
     )
-    fecha_nacimiento = models.DateField(verbose_name='Fecha de nacimiento')
+    fecha_nacimiento = models.DateField(verbose_name='Fecha de nacimiento',blank=True,null=True)
     genero = models.IntegerField(choices=GENEROS,verbose_name='Genero')
     puntuacion = models.IntegerField(choices=PUNTOS,verbose_name='Puntuación',blank=True,null=True)

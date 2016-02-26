@@ -16,6 +16,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="coldeportes" />
     <orderEntry type="module" module-name="gedi" />
+    <orderEntry type="module" module-name="expert" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

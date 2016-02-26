@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../../CEDESOFT/COLDEPORTES/coldeportes/.idea/coldeportes.iml" filepath="$PROJECT_DIR$/../../CEDESOFT/COLDEPORTES/coldeportes/.idea/coldeportes.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/dosports.iml" filepath="$PROJECT_DIR$/.idea/dosports.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../CEDESOFT/expert/.idea/expert.iml" filepath="$PROJECT_DIR$/../../CEDESOFT/expert/.idea/expert.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../CEDESOFT/GEDI/gedi/.idea/gedi.iml" filepath="$PROJECT_DIR$/../../CEDESOFT/GEDI/gedi/.idea/gedi.iml" />
     </modules>
   </component>
