@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from gestion_usuarios.forms import UsuarioForm
 # Create your views here.
 def hello_world(request):
-    return JsonResponse('Hola mundo')
+    return JsonResponse({'Hola mundo'})
 
 def inicio(request):
     return render(request,'index.html',{
