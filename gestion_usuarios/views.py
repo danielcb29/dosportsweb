@@ -23,10 +23,7 @@ def inicio(request):
 
 @login_required
 def inicio_login(request):
-
-    return render(request,'base.html',{
-
-    })
+    return redirect('listar_eventos')
 
 def crear_usuario(request):
     form = UsuarioForm()

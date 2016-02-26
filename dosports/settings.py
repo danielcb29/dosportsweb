@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     'gestion_usuarios',
     'gestion_eventos',
+    'bootstrap3_datetime',
 
 )
 

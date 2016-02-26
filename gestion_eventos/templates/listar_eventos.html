@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block contenido %}
+    <div class="col-lg-12">
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            <div class="ibox-content m-b-sm border-bottom">
+                <div class="p-xs">
+                    <div class="pull-left m-r-md">
+                        <i class="fa fa-globe text-navy mid-icon"></i>
+                    </div>
+                    <h2>Actualmente hay 20000 eventos disponibles...</h2>
+                </div>
+                <div class="search-form">
+                    <form action="index.html" method="get">
+                        <div class="input-group">
+                            <input type="text" placeholder="Busca eventos..." name="search" class="form-control input-lg">
+                            <div class="input-group-btn">
+                                <button class="btn btn-lg btn-primary" type="submit">
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+
+            <div class="ibox-content forum-container">
+
+                <div class="forum-title">
+
+                </div>
+                {% for e in eventos %}
+                    <div class="forum-item active">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="forum-icon">
+                                    <i class="fa fa-futbol-o"></i>
+                                </div>
+                                <a href="{% url 'ver_evento' e.id %}" class="forum-item-title">{{ e.nombre }}</a>
+                                <div class="forum-sub-title">Creador: {{ e.creador.get_full_name }}</div>
+                            </div>
+
+                            <div class="col-md-1 forum-info">
+                                <span class="views-number">
+                                    {{ e.plazas_disponibles }}
+                                </span>
+                                <div>
+                                    <small>Plazas disponibles</small>
+                                </div>
+                            </div>
+                            <div class="col-md-1 forum-info">
+                                <span>
+                                    {{ e.fecha }}
+                                </span>
+                                <div>
+                                    <small>Fecha</small>
+                                </div>
+                            </div>
+                            <div class="col-md-1 forum-info">
+                                <a href="{% url 'ver_evento' e.id %}" class="btn btn-sm btn-info">
+                                    Ver mas
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
