@@ -22,7 +22,7 @@ def crear_evento(request):
 
 @login_required
 def listar_eventos(request):
-    eventos = Evento.objects.all()
+    eventos = Evento.objects.all().order_by('-fecha')
     return render(request,'listar_eventos.html',{
         'eventos': eventos,
         'total' : eventos.count()

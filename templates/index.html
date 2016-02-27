@@ -9,7 +9,7 @@
     <!-- Add Your favicon here -->
     <!--<link rel="icon" href="img/favicon.ico">-->
 
-    <title>INSPINIA - Landing Page</title>
+    <title>DoSports - Pagina principal</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{STATIC_URL}}landing_page/css/bootstrap.min.css" rel="stylesheet">
@@ -62,16 +62,10 @@
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <div class="container">
-                <div class="carousel-caption">
-                    <h1> Hola mundo PC </h1>
-                    <p>Hola mundo PC 2</p>
-                    <p>
-                        <a class="btn btn-lg btn-primary" href="#" role="button">READ MORE</a>
-                        <a class="caption-link" href="#" role="button">Inspinia Theme</a>
-                    </p>
-                </div>
-                <div class="carousel-image wow zoomIn">
-                    <img src="{{STATIC_URL}}landing_page/img/laptop.png" alt="laptop"/>
+                <div class="carousel-caption blank">
+                    <img src="{{ STATIC_URL }}logo.png">
+                    <h1>Salud y diversion en un mismo lugar </h1>
+
                 </div>
             </div>
             <!-- Set background for slide in css -->
@@ -81,9 +75,8 @@
         <div class="item">
             <div class="container">
                 <div class="carousel-caption blank">
-                    <h1>Hola mundo movil</h1>
-                    <p>Hola mundo movil 2</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                    <img src="{{ STATIC_URL }}logo_azul.png">
+                    <h1>Disfruta tu evento, nosotros lo gestionamos por ti</h1>
                 </div>
             </div>
             <!-- Set background for slide in css -->
@@ -104,24 +97,20 @@
 <section id="features" class="container services">
     <div class="row">
         <div class="col-sm-3">
-            <h2>Full responsive</h2>
+            <h2>CREACIÓN DE EVENTOS</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>LESS/SASS Files</h2>
+            <h2>SUSCRIPCION A EVENTOS</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>6 Charts Library</h2>
+            <h2>CALENDARIO DE EVENTOS</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
         </div>
         <div class="col-sm-3">
-            <h2>Advanced Forms</h2>
+            <h2>MAPAS,PERFIL,...</h2>
             <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            <p><a class="navy-link" href="#" role="button">Details &raquo;</a></p>
         </div>
     </div>
 </section>
@@ -130,36 +119,32 @@
     <div class="row">
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
-            <h1>Over 40+ unique view<br/> <span class="navy"> with many custom components</span> </h1>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. </p>
+            <h1>Muchos deportes y lugares de Cáceres<br/> <span class="navy"> En desarrollo para muchas mas funcionalidades</span> </h1>
+            <p>Desarrollado por DoSports HackForGood </p>
         </div>
     </div>
     <div class="row">
         <div class="col-md-3 text-center wow fadeInLeft">
             <div>
                 <i class="fa fa-mobile features-icon"></i>
-                <h2>Full responsive</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
+                <h2>Aplicación Movil</h2>
+            </div><br><br><br>
             <div class="m-t-lg">
-                <i class="fa fa-bar-chart features-icon"></i>
-                <h2>6 Charts Library</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                <i class="fa fa-calendar features-icon"></i>
+                <h2>Calendario</h2>
             </div>
         </div>
         <div class="col-md-6 text-center  wow zoomIn">
-            <img src="img/perspective.png" alt="dashboard" class="img-responsive">
+            <img src="{{STATIC_URL}}landing_page/img/perspective.png" alt="dashboard" class="img-responsive">
         </div>
         <div class="col-md-3 text-center wow fadeInRight">
             <div>
-                <i class="fa fa-envelope features-icon"></i>
-                <h2>Mail pages</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
-            </div>
+                <i class="fa fa-tasks features-icon"></i>
+                <h2>Listado y busqueda de eventos</h2>
+            </div><br><br><br>
             <div class="m-t-lg">
-                <i class="fa fa-google features-icon"></i>
-                <h2>AngularJS version</h2>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus.</p>
+                <i class="fa fa-facebook features-icon"></i>
+                <h2>Redes Sociales</h2>
             </div>
         </div>
     </div>
@@ -170,16 +155,15 @@
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>Our Team</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                <h1>Nuestro Equipo</h1>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-4 wow fadeInLeft">
                 <div class="team-member">
-                    <img src="img/avatar3.jpg" class="img-responsive img-circle img-small" alt="">
-                    <h4><span class="navy">Amelia</span> Smith</h4>
-                    <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus. </p>
+                    <img src="{{STATIC_URL}}landing_page/img/avatar3.jpg" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">Cristina</span> Extremera</h4>
+                    <p>Estudiante de Ingeniería del Software con experiencia en desarrollo de aplicaciones Android y web, Java, C++, CSS, Javascript, PostgresSQL. </p>
                     <ul class="list-inline social-icon">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
@@ -192,9 +176,9 @@
             </div>
             <div class="col-sm-4">
                 <div class="team-member wow zoomIn">
-                    <img src="img/avatar1.jpg" class="img-responsive img-circle" alt="">
-                    <h4><span class="navy">John</span> Novak</h4>
-                    <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
+                    <img src="{{STATIC_URL}}landing_page/img/avatar1.jpg" class="img-responsive img-circle" alt="">
+                    <h4><span class="navy">Daniel</span> Correa</h4>
+                    <p>Estudiante de Ingeniería de sistemas con experiencia en desarrollo de aplicaciones web, con amplia experiencia en HTML5, CSS3, Boostrap, Javascript, Java, Python y C++. Trabajando actualmente sobre interoperabilidad y modelos Multitenant.</p>
                     <ul class="list-inline social-icon">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
@@ -207,9 +191,9 @@
             </div>
             <div class="col-sm-4 wow fadeInRight">
                 <div class="team-member">
-                    <img src="img/avatar2.jpg" class="img-responsive img-circle img-small" alt="">
-                    <h4><span class="navy">Peter</span> Johnson</h4>
-                    <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p>
+                    <img src="{{STATIC_URL}}landing_page/img/avatar2.jpg" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">Daniel</span> Rodriguez</h4>
+                    <p>Estudiante de Ciencias de la Actividad Fisica y del Deporte y Master en Emprendimiento e Innivacion, formacion de creacion de empresas, actualmente desarrollando su propia StartUp en el programa YUZZ. </p>
                     <ul class="list-inline social-icon">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
@@ -222,8 +206,36 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <div class="col-sm-4 wow fadeInRight">
+                <div class="team-member">
+                    <img src="{{STATIC_URL}}landing_page/img/avatar4.jpg" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">Alberto</span> Ricci</h4>
+                    <p>Estudiante de Ingeniería en Computadores con experiencia en Java, C++, paralelización en rendimiento (OpenMP,MPI,...)</p>
+                    <ul class="list-inline social-icon">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4 wow fadeInRight"></div>
+            <div class="col-sm-4 wow fadeInRight">
+                <div class="team-member">
+                    <img src="{{STATIC_URL}}landing_page/img/avatar9.jpg" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">Gerardo</span> Bernal</h4>
+                    <p>Estudiante de Ingeniería del Software con experencia en HTML5 y aplicaciones Android.</p>
+                    <ul class="list-inline social-icon">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -234,30 +246,25 @@
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>Contact Us</h1>
-                <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p>
+                <h1>Contacto</h1>
+                <p>Equipo de HackForGood 2016, sede de Caceres.</p>
             </div>
         </div>
         <div class="row m-b-lg">
-            <div class="col-lg-3 col-lg-offset-3">
+            <div class="col-lg-12 text-center">
                 <address>
-                    <strong><span class="navy">Company name, Inc.</span></strong><br/>
-                    795 Folsom Ave, Suite 600<br/>
-                    San Francisco, CA 94107<br/>
-                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                    <strong><span class="navy">Company DoSports.</span></strong><br/>
+                    Av. de la Universidad<br/>
+                    Escuela Politecnica,10004, Caceres<br/>
+                    <abbr title="Phone">Telefono:</abbr> (+34) 123456798
                 </address>
-            </div>
-            <div class="col-lg-4">
-                <p class="text-color">
-                    Consectetur adipisicing elit. Aut eaque, totam corporis laboriosam veritatis quis ad perspiciatis, totam corporis laboriosam veritatis, consectetur adipisicing elit quos non quis ad perspiciatis, totam corporis ea,
-                </p>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <a href="mailto:test@email.com" class="btn btn-primary">Send us mail</a>
+                <a href="mailto:dcorreab@alumnos.unex.es" class="btn btn-primary">Envianos Tu e-mail</a>
                 <p class="m-t-sm">
-                    Or follow us on social platform
+                    Siguenos en nuestras redes sociales
                 </p>
                 <ul class="list-inline social-icon">
                     <li><a href="#"><i class="fa fa-twitter"></i></a>
@@ -271,7 +278,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2015 Company Name</strong><br/> consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                <p><strong>&copy; 2016 Company DoSports.</strong><br/></p>
             </div>
         </div>
     </div>
