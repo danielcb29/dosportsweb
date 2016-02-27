@@ -16,27 +16,32 @@
                         {% bootstrap_field form.fecha %}
                     </div>
                     {% endcomment %}
-                    <div class="col-lg-6">
-                        {% bootstrap_field form.nombre %}
+                    <div class="col-lg-12">
+                        <div class="col-lg-5">
+                            {% bootstrap_field form.nombre layout="verical" %}
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-5">
+                            {% bootstrap_field form.plazas layout="verical"%}
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        {% bootstrap_field form.plazas %}
+                    <div class="col-lg-12">
+                        <div class="col-lg-5">
+                            {% bootstrap_field form.dificultad layout="verical"%}
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-5">
+                            {% bootstrap_field form.deporte layout="verical" %}
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        {% bootstrap_field form.dificultad %}
+                    <div class="col-lg-12">
+                        <div class="col-lg-5">
+                            {% bootstrap_field form.lugar %}
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        {% bootstrap_field form.deporte %}
-                    </div>
-                    <div class="col-lg-6">
-                        {% bootstrap_field form.lugar %}
-                    </div>
-                    <button type="submit" class="btn btn-primary block full-width m-b">Crear</button>
+                    <button type="submit" class="btn btn-primary btn-md">Crear</button>
                 </form>
             </div>
         </div>
     </div>
-{% endblock %}
-{% block js %}
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
 {% endblock %}

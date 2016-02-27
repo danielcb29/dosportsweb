@@ -29,7 +29,7 @@ class Evento(models.Model):
         (2,'INTERMEDIO'),
         (3,'AVANZADO')
     )
-    nombre = models.CharField(max_length=150)
+    nombre = models.CharField(max_length=150,verbose_name='Nombre del evento')
     creador = models.ForeignKey(Usuario)
     fecha = models.DateTimeField(auto_now=True,verbose_name='Fecha del evento')
     plazas = models.IntegerField()

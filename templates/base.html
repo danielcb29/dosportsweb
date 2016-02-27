@@ -54,6 +54,15 @@
                         <li><a href="{% url 'listar_eventos' %}">Ver todos</a></li>
                     </ul>
                 </li>
+
+                <li>
+                    <a href=""><i class="fa fa-user"></i> <span class="nav-label">Mi información</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="{% url 'mis_eventos' %}">Mis eventos</a></li>
+                        <li><a href="{% url 'listar_eventos' %}">Mis suscripciones</a></li>
+                        <li><a href="{% url 'listar_eventos' %}">Mi perfil</a></li>
+                    </ul>
+                </li>
             </ul>
 
         </div>
@@ -140,7 +149,7 @@
                 </div>
                 <div class="col-sm-8">
                     <div class="title-action">
-                        <a href="" class="btn btn-primary">Recargar</a>
+
                     </div>
                 </div>
             </div>

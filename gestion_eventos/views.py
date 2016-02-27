@@ -24,7 +24,8 @@ def crear_evento(request):
 def listar_eventos(request):
     eventos = Evento.objects.all()
     return render(request,'listar_eventos.html',{
-        'eventos': eventos
+        'eventos': eventos,
+        'total' : eventos.count()
     })
 
 @login_required

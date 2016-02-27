@@ -38,3 +38,9 @@ def crear_usuario(request):
     return render(request,'register.html',{
         'form' : form
     })
+
+@login_required
+def mis_eventos(request):
+    return render(request,'listar_mis_eventos.html',{
+
+    })
