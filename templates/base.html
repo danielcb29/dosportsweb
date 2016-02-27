@@ -30,14 +30,17 @@
         <div class="sidebar-collapse">
             <ul class="nav" id="side-menu">
                 <li class="nav-header">
-                    <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="{{ STATIC_URL }}admin/img/profile_small.jpg" />
+                    <img src="{{ STATIC_URL }}logo.png">
+                    <div class="dropdown profile-element">
+                        <br><br>
+                            <span>
+                                <img alt="image" class="img-circle" src="{{ STATIC_URL }}admin/img/profile_small.jpg" />
                              </span>
                         <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                             <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">{{ user.get_full_name }}</strong>
                              </span> <span class="text-muted text-xs block">22 años <b class="caret"></b></span> </span> </a>
                         <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a href="">Prerfil</a></li>
+                            <li><a href="{% url 'mi_perfil' %}">Prerfil</a></li>
                             <li><a href="">Cambiar contraseña</a></li>
                             <li class="divider"></li>
                             <li><a href="{% url 'logout' %}">Cerrar sesion</a></li>
@@ -60,7 +63,7 @@
                     <ul class="nav nav-second-level">
                         <li><a href="{% url 'mis_eventos' %}">Mis eventos</a></li>
                         <li><a href="{% url 'mis_suscripciones' %}">Mis suscripciones</a></li>
-                        <li><a href="{% url 'listar_eventos' %}">Mi perfil</a></li>
+                        <li><a href="{% url 'mi_perfil' %}">Mi perfil</a></li>
                     </ul>
                 </li>
             </ul>

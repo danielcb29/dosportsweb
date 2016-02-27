@@ -22,5 +22,6 @@ urlpatterns = patterns('gestion_usuarios.views',
     url(r'^crear','crear_usuario',name='crear_usuario' ),
     url(r'^mis-eventos','mis_eventos',name='mis_eventos' ),
     url(r'^mis-suscripciones','mis_suscripciones',name='mis_suscripciones' ),
+    url(r'^mi-perfil','mi_perfil',name='mi_perfil' ),
 )
 
