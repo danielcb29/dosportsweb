@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% load bootstrap3 %}
+{% block css %}
+
+    <!--script src="http://maps.googleapis.com/maps/api/js"></script-->
+{% endblock %}
 {% block contenido %}
     <div class="col-lg-12">
         <div class="wrapper wrapper-content animated fadeInUp">
@@ -39,7 +43,7 @@
                             <dl class="dl-horizontal" >
 
                                 <dt>Fecha:</dt> <dd>{{ evento.fecha }}</dd>
-                                <dt>Participants:</dt>
+                                <dt>Participantes:</dt>
                                 <dd class="project-people">
                                 <a href=""><img alt="image" class="img-circle" src="{{STATIC_URL}}admin/img/a3.jpg"></a>
                                 <a href=""><img alt="image" class="img-circle" src="{{STATIC_URL}}admin/img/a1.jpg"></a>
@@ -70,7 +74,7 @@
                             <div class="panel-options">
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a href="#tab-1" data-toggle="tab">Comentarios</a></li>
-
+                                    <li><a href="#tab-2" data-toggle="tab">Mapas</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -128,6 +132,15 @@
 
                         </div>
 
+
+                        <div class="tab-pane" id="tab-2">
+                            <div class="ibox-content">
+                                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQTpXj82d8UpCi97wzo_nKXL7nYrd4G70"></script>
+                                <div class="google-map" id="map1"></div>
+
+                            </div>
+                        </div>
+
                         </div>
 
                         </div>
@@ -139,4 +152,37 @@
             </div>
         </div>
     </div>
+{% endblock %}
+{% block js %}
+    <!--script src="http://maps.googleapis.com/maps/api/js"></script-->
+    <script type="text/javascript">
+        // When the window has finished loading google map
+
+
+        function init() {
+
+
+            //var myLatLng = {lat: -25.363, lng: 131.044};
+            var la = parseInt({{ evento.lugar.latitud }});
+            var lo = parseInt({{ evento.lugar.longitud }});
+            var myLatLng = {lat: 39.488127, lng: -6.411293};
+
+            var map = new google.maps.Map(document.getElementById('map1'), {
+              zoom: 11,
+              center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map
+              //title: 'Hello World!'
+            });
+
+        }
+        $(document).init(function(){
+            google.maps.event.addDomListener(window, 'load', init);
+        });
+
+
+    </script>
 {% endblock %}

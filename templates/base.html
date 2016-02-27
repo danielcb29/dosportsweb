@@ -51,11 +51,16 @@
                     </div>
                 </li>
                 <li class="active">
-                    <a href=""><i class="fa fa-th-large"></i> <span class="nav-label">Eventos</span> <span class="fa arrow"></span></a>
+                    <a href=""><i class="fa fa-trophy"></i> <span class="nav-label">Eventos</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="{% url 'crear_evento' %}">Crear</a></li>
                         <li><a href="{% url 'listar_eventos' %}">Ver todos</a></li>
                     </ul>
+                </li>
+
+                <li>
+                    <a href="{% url 'calendario' %}"><i class="fa fa-calendar"></i> <span class="nav-label">Calendario evetos</span></a>
+
                 </li>
 
                 <li>

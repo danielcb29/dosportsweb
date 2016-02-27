@@ -69,3 +69,9 @@ def comentar(request,id_ev):
         descripcion=request.POST['message']
     ).save()
     return redirect('ver_evento',id_ev)
+
+@login_required
+def calendario(request):
+    return render(request,'calendar.html',{
+
+    })

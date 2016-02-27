@@ -19,44 +19,49 @@
 
 <body class="gray-bg">
 
-    <div class="middle-box text-center loginscreen   animated fadeInDown">
+    <div class="col-lg-8 col-lg-offset-3 text-center loginscreen   animated fadeInDown">
         <div>
-            <div>
+            <div class="row col-lg-10">
 
-                <h1 class="logo-name">IN+</h1>
-
+                <h1 class="logo-name"><img src="{{ STATIC_URL }}logo_azul.png"></h1>
+                <h3>Registrate to DO+</h3>
+                <p>Crea una cuenta para entrar en acción.</p>
             </div>
-            <h3>Register to IN+</h3>
-            <p>Create account to see it in action.</p>
+
             <form class="m-t" role="form" action="" method="post">
                 {% csrf_token %}
-                <div class="form-group">
+                <div class="form-group col-lg-5">
                     {% bootstrap_field form.username %}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-lg-5">
                     {% bootstrap_field form.first_name %}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-lg-5">
                     {% bootstrap_field form.last_name %}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-lg-5">
                     {% bootstrap_field form.email %}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-lg-5">
                     {% bootstrap_field form.password %}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-lg-5">
                     {% bootstrap_field form.fecha_nacimiento %}
                 </div>
-                <div class="form-group">
+                <div class="form-group col-lg-5">
                     {% bootstrap_field form.genero %}
                 </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Register</button>
+                <div class="col-lg-4 col-lg-offset-3">
+                    <button type="submit" class="btn btn-primary block full-width m-b" style="background-color: #1E4179;border-color: #1E4179;">Registrar</button>
 
-                <p class="text-muted text-center"><small>Already have an account?</small></p>
-                <a class="btn btn-sm btn-white btn-block" href="login.html">Login</a>
+                    <p class="text-muted text-center"><small>¿Ya tienes una cuenta?</small></p>
+                    <a class="btn btn-sm btn-white btn-block" href="{% url 'login' %}">Ingresar</a>
+                </div>
+
             </form>
-            <p class="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
+            <div class="col-lg-10">
+            <p class="m-t"> <small>DoSports Inc &copy; 2016</small> </p>
+            </div>
         </div>
     </div>
 

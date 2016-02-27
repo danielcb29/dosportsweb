@@ -10,5 +10,5 @@ class UsuarioForm(ModelForm):
         fields = ('username','first_name','last_name','email','password','fecha_nacimiento','genero',)
         widgets = {
             'password' : forms.PasswordInput(),
-            'fecha_nacimiento': forms.DateInput(),
+            'fecha_nacimiento': forms.DateInput(attrs={'type':'date'}),
         }

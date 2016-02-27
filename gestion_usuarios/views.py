@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from gestion_usuarios.forms import UsuarioForm
 from django.contrib.auth.models import *
 from django.contrib.auth.decorators import login_required
-from gestion_eventos.models import Evento,ParticipantesEvento,Usuario
+from gestion_eventos.models import Evento,ParticipantesEvento,Usuario,Comentarios
 # Create your views here.
 def hello_world(request):
     return JsonResponse({0:'Hola mundo'})
@@ -57,6 +57,9 @@ def mis_suscripciones(request):
 @login_required
 def mi_perfil(request):
     u = Usuario.objects.get(id=request.user.id)
+    comentarios = Comentarios.objects.filter(usuario=request.user.id)[:3]
     return render(request,'mi_perfil.html',{
-        'usuario': u
+        'usuario': u,
+        'comentarios': comentarios
     })
+

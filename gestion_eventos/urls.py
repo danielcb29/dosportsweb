@@ -24,6 +24,7 @@ urlpatterns = patterns('gestion_eventos.views',
     url(r'^suscribirse/(\d+)$','suscribirse_evento',name='suscribirse_evento'),
     url(r'^anular-sus/(\d+)$','anular_suscripcion',name='anular_suscripcion'),
     url(r'^comentar/(\d+)$','comentar',name='comentar'),
+    url(r'^calendario$','calendario',name='calendario'),
 
 )
 
