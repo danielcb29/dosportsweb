@@ -37,7 +37,7 @@ def ver_evento(request,id):
 
     ids = [x.id for x in ParticipantesEvento.objects.get(evento=evento).jugadores.all()]
     suscrito=False
-    if request.user.id in ids:
+    if request.user.id in ids or request.user.id == evento.creador.id:
         suscrito = True
 
     comentarios  = Comentarios.objects.filter(evento=evento)

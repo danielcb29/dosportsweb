@@ -24,7 +24,7 @@
             </tr>
             </thead>
             <tbody>
-            {% for e in eventos %}
+            {% for e in suscripciones %}
             <tr class="gradeC">
                 <td>{{ e.nombre }}</td>
                 <td>{{ e.fecha }}</td>
@@ -35,9 +35,13 @@
                 </td>
             </tr>
             {% endfor %}
-            </tbody>
-            </table>
 
+            </tbody>
+
+            </table>
+            {% if not suscripciones %}
+                <p>No hay datos</p>
+            {% endif %}
             </div>
         </div>
     </div>

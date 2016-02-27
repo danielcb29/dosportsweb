@@ -12,9 +12,11 @@
                                     <a href="{% url 'suscribirse_evento' evento.id %}" class="btn btn-primary btn-md pull-right">Suscribirse</a>
                                 {% elif evento.porcentaje == 100 %}
                                     <span class="pull-right"><strong>No hay plazas disponibles</strong></span>
-                                {% else %}
+                                {% elif user.id != evento.creador.id %}
                                     <span class="pull-right"><strong>Ya estas suscrito!</strong></span><br>
                                     <a href="{% url 'anular_suscripcion' evento.id %}" class="btn btn-warning btn-md pull-right">Anular suscripcion</a>
+                                {% else %}
+                                    <span class="pull-right"><strong>Eres el creador del evento!</strong></span><br>
                                 {% endif %}
                                 <h2>{{ evento.nombre }}</h2>
                             </div>

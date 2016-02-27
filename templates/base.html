@@ -59,7 +59,7 @@
                     <a href=""><i class="fa fa-user"></i> <span class="nav-label">Mi información</span> <span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level">
                         <li><a href="{% url 'mis_eventos' %}">Mis eventos</a></li>
-                        <li><a href="{% url 'listar_eventos' %}">Mis suscripciones</a></li>
+                        <li><a href="{% url 'mis_suscripciones' %}">Mis suscripciones</a></li>
                         <li><a href="{% url 'listar_eventos' %}">Mi perfil</a></li>
                     </ul>
                 </li>
@@ -186,7 +186,7 @@
     <!-- Custom and plugin javascript -->
     <script src="{{STATIC_URL}}admin/js/inspinia.js"></script>
     <script src="{{STATIC_URL}}admin/js/plugins/pace/pace.min.js"></script>
-    <script type="text/javascript">
+    <!--script type="text/javascript">
         $(document).ready(function() {
             $("#id_fecha_picker").datetimepicker({
                 "format": "YYYY-MM-DD HH:mm", "language": "es", "pickSeconds": false
@@ -195,7 +195,7 @@
 
 
         });
-    </script>
+    </script-->
     {% block js %}
 
     {% endblock %}
