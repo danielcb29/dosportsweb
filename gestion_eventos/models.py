@@ -1,6 +1,7 @@
 from django.db import models
 from gestion_usuarios.models import Usuario
-import datetime
+from django.utils import timezone
+
 # Create your models here.
 class Deporte(models.Model):
     nombre = models.CharField(max_length=150,verbose_name='Deporte')
@@ -31,7 +32,7 @@ class Evento(models.Model):
     )
     nombre = models.CharField(max_length=150,verbose_name='Nombre del evento')
     creador = models.ForeignKey(Usuario)
-    fecha = models.DateTimeField(auto_now=True,verbose_name='Fecha del evento')
+    fecha = models.DateTimeField(verbose_name='Fecha del evento')
     plazas = models.IntegerField()
     dificultad = models.IntegerField(choices=DIFICULTADES,verbose_name='Nivel')
     deporte = models.ForeignKey(Deporte)
@@ -39,11 +40,9 @@ class Evento(models.Model):
 
     def estado(self):
         print(self.fecha)
-        print(datetime.datetime.now())
-        if self.plazas_disponibles() == 0:
+        print(timezone.datetime.now())
+        if self.plazas_disponibles() == 0 or self.fecha < timezone.now():
             return False
-        #if self.fecha < datetime.datetime.now():
-        #    return False
         return True
 
     def plazas_disponibles(self):

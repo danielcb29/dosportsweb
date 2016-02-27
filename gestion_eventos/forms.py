@@ -9,11 +9,12 @@ class EventoForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(EventoForm, self).__init__(*args, **kwargs)
         #self.fields['fecha'].widget.attrs.update({'class': 'datetimepicker'})
+        self.fields['fecha'].widget.attrs.update({'readonly': True})
 
     class Meta:
         model = Evento
-        exclude = ('creador','fecha',)
+        exclude = ('creador',)
         widgets = {
-            #'fecha': DateTimePicker(options={"format": "YYYY-MM-DD HH:mm","pickSeconds": False}),
+            'fecha': DateTimePicker(options={"format": "YYYY-MM-DD HH:mm","pickSeconds": False}),
 
         }

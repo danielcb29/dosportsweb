@@ -11,11 +11,8 @@
             </div>
             <div class="ibox-content">
                 <form method="post" action="" class="form-horizontal">{% csrf_token %}
-                    {% comment %}
-                    <div class="col-lg-6">
-                        {% bootstrap_field form.fecha %}
-                    </div>
-                    {% endcomment %}
+
+
                     <div class="col-lg-12">
                         <div class="col-lg-5">
                             {% bootstrap_field form.nombre layout="verical" %}
@@ -37,6 +34,10 @@
                     <div class="col-lg-12">
                         <div class="col-lg-5">
                             {% bootstrap_field form.lugar %}
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-5">
+                            {% bootstrap_field form.fecha layout="vertical" %}
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary btn-md">Crear</button>
