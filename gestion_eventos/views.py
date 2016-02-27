@@ -72,6 +72,17 @@ def comentar(request,id_ev):
 
 @login_required
 def calendario(request):
+    eventos = Evento.objects.all()
+    array = []
+    for e in eventos:
+        dic = {}
+        dic['id'] = e.id
+        dic['title'] = e.nombre
+        f = e.fecha.replace(tzinfo=None)
+        dic['start'] = str(f)
+        dic['allDay'] = 'false'
+        dic['url'] = '/eventos/ver/'+str(e.id)
+        array.append(dic)
     return render(request,'calendar.html',{
-
+        'eventos' : array
     })
