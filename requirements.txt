@@ -1,4 +1,4 @@
-Django==1.8.1
+Django==1.11.29
 django-bootstrap3==5.4.0
 django-formtools==1.0
 Pillow==6.2.0
